@@ -11,5 +11,13 @@
 
     <artifactId>springcloud-api</artifactId>
 
+    <!--  当前Module自己需要的依赖，如果父依赖中配置了版本，这里就不用写了  -->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 
 </project>

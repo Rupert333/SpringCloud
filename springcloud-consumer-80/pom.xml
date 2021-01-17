@@ -11,5 +11,17 @@
 
     <artifactId>springcloud-consumer-80</artifactId>
 
-
+    <dependencies>
+        <!--实体类-->
+        <dependency>
+            <groupId>com.kuang</groupId>
+            <artifactId>springcloud-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--http-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 </project>

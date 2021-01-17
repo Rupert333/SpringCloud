@@ -3,7 +3,7 @@
 <mapper namespace="com.kuang.springcloud.dao.Deptdao">
     <insert id="addDept" parameterType="com.kuang.springcloud.pojo.Dept">
          insert  into  dept(dname, db_souce)
-         values(${dname},DATABASE());
+         values(#{dname},DATABASE());
     </insert>
 
     <select id="queryById" resultType="com.kuang.springcloud.pojo.Dept" parameterType="long">
