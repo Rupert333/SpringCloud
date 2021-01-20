@@ -22,7 +22,9 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String REST_URL_PREFIX="http://localhost:8001/module/dept";
+//     private static final String REST_URL_PREFIX="http://localhost:8001/module/dept";
+    // Ribbon 我们这里的地址，应该是一个变量，通过服务名称来访问
+    private static final String REST_URL_PREFIX="http://SPRINGCLOUD-PROVIDER-DEPT-YYG/module/dept";
 
     /**
      * Title: 增加部门方法,
