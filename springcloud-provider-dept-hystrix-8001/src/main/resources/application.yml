@@ -1,0 +1,24 @@
+server:
+  port: 8001
+#  spring相关配置
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://localhost:3306/db01?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: ab123456
+  application:
+    name: springcloud-provider-dept-yyg
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#  eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-hystrix-dept8001
+#  提示信息
+info:
+  app.name: yyg-springcloud
+  company.name: gwssi
