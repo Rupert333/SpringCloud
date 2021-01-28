@@ -3,7 +3,8 @@ package com.kuang.springcloud.service;
 import com.kuang.springcloud.pojo.Dept;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -11,12 +12,12 @@ import java.util.List;
 @FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT-YYG")
 public interface DeptClientService {
 
-    @GetMapping("/module/dept/add")
+    @RequestMapping("/module/dept/add")
     boolean add(Dept dept);
 
-    @GetMapping("/module/dept/getDeptById/{id}")
-    Dept queryById(Long id);
+    @RequestMapping("/module/dept/getDeptById/{id}")
+    Dept queryById(@PathVariable("id")Long id);
 
-    @GetMapping("/module/dept/getAllDept")
+    @RequestMapping("/module/dept/getAllDept")
     List<Dept> getAllDept();
 }
