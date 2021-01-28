@@ -1,0 +1,21 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: zuul9527.com
+    prefer-ip-address: true #是否显示真实id
+
+zuul:
+  routes:
+    yyg.serviceId: springcloud-provider-dept-yyg
+    yyg.path: /yyg/** # 将上面的访问路径转化为自定义的
+  ignored-services: springcloud-provider-dept-yyg # 不能通过这个路径访问！  “*”：忽略隐藏全部的
+  prefix: /wuyuan # 设置公共前缀
