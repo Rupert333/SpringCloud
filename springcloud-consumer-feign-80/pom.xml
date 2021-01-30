@@ -13,7 +13,6 @@
 
 
     <dependencies>
-
         <!--实体类-->
         <dependency>
             <groupId>com.kuang</groupId>

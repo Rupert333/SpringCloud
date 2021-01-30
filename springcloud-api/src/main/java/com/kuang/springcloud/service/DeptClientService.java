@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT-YYG")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT-YYG" ,fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @RequestMapping("/module/dept/add")
