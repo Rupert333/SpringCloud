@@ -1,0 +1,11 @@
+#系统级别
+spring:
+  application:
+    name: springcloud-client
+  cloud:
+    config:
+      name: configClient #需要从git上读取的文件名称
+      profile: dev
+      label: master
+      uri: http://localhost:3344
+
